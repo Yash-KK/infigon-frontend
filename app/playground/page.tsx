@@ -1,9 +1,9 @@
-import CareerOptions from "@/components/CareerOptions";
+import Dashboard from "@/components/Dashboard";
 
 export default function Playground() {
   return (
     <div>
-      <CareerOptions />
+      <Dashboard />
     </div>
   );
 }
