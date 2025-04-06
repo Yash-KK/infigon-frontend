@@ -1,9 +1,9 @@
-import AppBar from "@/components/AppBar";
+import Intro from "@/components/Intro";
 
 export default function Playground() {
   return (
     <div>
-      <AppBar/>
+      <Intro />
     </div>
   );
 }

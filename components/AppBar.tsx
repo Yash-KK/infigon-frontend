@@ -9,11 +9,14 @@ const AppBar = () => {
       <div className="flex flex-1">
         <InfigonIcon />
         <div className="flex space-x-5 ml-6">
-          <Label text="Home" />
-          <Label text="My Tests" />
-          <Label text="My Sessions" />
-          <Label text="Career Library" />
-          <Label text="Your Report" className="text-black" />
+          <Label text="Home" className="font-medium px-3 py-2" />
+          <Label text="My Tests" className="font-medium px-3 py-2" />
+          <Label text="My Sessions" className="font-medium px-3 py-2" />
+          <Label text="Career Library" className="font-medium px-3 py-2" />
+          <Label
+            text="Your Report"
+            className="text-black font-medium px-3 py-2"
+          />
         </div>
       </div>
 
