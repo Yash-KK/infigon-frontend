@@ -3,7 +3,7 @@ import Label from "./ui/Label";
 
 export default function Intro() {
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <div className="p-7 w-3/5">
         <Label
           text=" Your Career Analysis Report"
@@ -16,7 +16,7 @@ export default function Intro() {
       </div>
 
       <div>
-        <CardWrapper>
+        <CardWrapper className="flex items-center m-3 shadow-sm border border-slate-200">
           <div className="p-4">
             <Label
               text="Want to speak to an expert Career Counsellor?"
