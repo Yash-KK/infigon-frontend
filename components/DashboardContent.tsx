@@ -10,6 +10,9 @@ import EmotionalResult from "./Emotional/Result";
 import EmotionalIntelligence from "./Emotional/Intelligence";
 import UnderstandingLearningStyles from "./Learning/Styles";
 import LearningResult from "./Learning/Result";
+import InterstExplorer from "./Interest/Explorer";
+import RAISECModel from "./Interest/RAISEC";
+import InterestResult from "./Interest/Result";
 
 type Props = {
   item: SidebarItem;
@@ -23,9 +26,9 @@ const DashboardContent = ({ item, activeChild }: Props) => {
     return <PersonalityExplorer />;
   }
   if (item.id === "test2") {
-    if (activeChild === "Interest Types") return <PersonalityTypes />;
-    if (activeChild === "Suggested Fields") return <PersonalityResult />;
-    return <PersonalityExplorer />;
+    if (activeChild === "RAISEC Model") return <RAISECModel />;
+    if (activeChild === "Your Result") return <InterestResult />;
+    return <InterstExplorer />;
   }
 
   if (item.id === "test3") {

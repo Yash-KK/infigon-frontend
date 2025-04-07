@@ -48,7 +48,7 @@ export const sidebarData: SidebarItem[] = [
     label: "TEST 2",
     title: "Interest Explorer",
     description: "Understanding Interests",
-    children: ["Interest Types", "Suggested Fields"],
+    children: ["RAISEC Model", "Your Result"],
     color: "green",
     icon: InterestImage,
   },
