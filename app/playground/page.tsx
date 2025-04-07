@@ -3,14 +3,13 @@ import CareerOptions from "@/components/CareerOptions";
 import Dashboard from "@/components/Dashboard";
 import Intro from "@/components/Intro";
 
-
-export default function Playground() {
+export default function Home() {
   return (
     <div>
       <AppBar />
       <Intro />
       <CareerOptions />
-      <Dashboard />
+      <Dashboard />{" "}
     </div>
   );
 }
