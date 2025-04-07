@@ -1,7 +1,7 @@
 import InfigonIcon from "@/icons/Infigon";
 import NotificationIcon from "@/icons/Notification";
 import ChevronDownIcon from "@/icons/ChevronDown";
-import Label from "./ui/Label";
+import Label from "./Label";
 
 const AppBar = () => {
   return (
