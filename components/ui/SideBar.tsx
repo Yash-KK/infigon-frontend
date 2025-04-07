@@ -21,7 +21,7 @@ const SideBar = ({
 }: Props) => {
   return (
     <aside className="w-72 p-4 border-r border-[#CACACA] bg-white">
-      <div className="flex flex-col gap-6 h-[750px]">
+      <div className="flex flex-col gap-6 h-[770px]">
         {sidebarData.map((item) => {
           const color = colorClassMap[item.color];
 

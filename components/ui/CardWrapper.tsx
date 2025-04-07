@@ -1,9 +1,10 @@
 interface CardProps {
   children: React.ReactNode;
+  className?: string
 }
-const CardWrapper = ({ children }: CardProps) => {
+const CardWrapper = ({ children, className }: CardProps) => {
   return (
-    <div className="flex items-center m-6 bg-white shadow-sm border border-slate-200  rounded-lg">
+    <div className={`rounded-lg ${className}`}>
       {children}
     </div>
   );
