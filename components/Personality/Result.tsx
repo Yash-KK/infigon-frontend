@@ -112,9 +112,9 @@ const PersonalityResult = () => {
                       <div className="mt-1 text-white text-lg">•</div>
                       <p className="text-sm">
                         <span className="font-semibold">{title}:</span> They are
-                        friendly, approachable, & enjoy being around people.
-                        They are often seen as the "hosts" of their social
-                        circles.
+                        friendly, approachable, &amp; enjoy being around people.
+                        They are often seen as the &quot;hosts&quot; of their
+                        social circles.
                       </p>
                     </div>
                   </div>
@@ -142,9 +142,9 @@ const PersonalityResult = () => {
                       <div className="mt-1 text-white text-lg">•</div>
                       <p className="text-sm">
                         <span className="font-semibold">{title}:</span> They are
-                        friendly, approachable, & enjoy being around people.
-                        They are often seen as the "hosts" of their social
-                        circles.
+                        friendly, approachable, &amp; enjoy being around people.
+                        They are often seen as the &quot;hosts&quot; of their
+                        social circles.
                       </p>
                     </div>
                   </div>

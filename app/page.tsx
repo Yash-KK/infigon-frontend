@@ -1,9 +1,15 @@
-import Image from "next/image";
+import AppBar from "@/components/ui/AppBar";
+import CareerOptions from "@/components/CareerOptions";
+import Dashboard from "@/components/Dashboard";
+import Intro from "@/components/Intro";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen bg-gray-500 justify-center items-center">
-      Initial Setup
+    <div>
+      <AppBar />
+      <Intro />
+      <CareerOptions />
+      <Dashboard />{" "}
     </div>
   );
 }

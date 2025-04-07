@@ -2,7 +2,8 @@ import InfigonIcon from "@/icons/Infigon";
 import NotificationIcon from "@/icons/Notification";
 import ChevronDownIcon from "@/icons/ChevronDown";
 import Label from "./Label";
-
+import Image from "next/image";
+import ProfileImage from "../../public/Profile.png";
 const AppBar = () => {
   return (
     <div className="flex h-16 items-center py-10py-5 px-30 border-b-1 border-gray-200">
@@ -24,10 +25,12 @@ const AppBar = () => {
         <NotificationIcon />
 
         <div className="flex justify-center items-center ml-5">
-          <img
-            className="size-8 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
+          <Image
+            src={ProfileImage}
+            alt="Profile"
+            height={40}
+            width={40}
+            className="rounded-full"
           />
 
           <div className="ml-2">

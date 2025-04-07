@@ -1,5 +1,3 @@
-import DownloadIcon from "@/icons/Download";
-
 interface ButtonProps {
   text: string;
   className?: string;
