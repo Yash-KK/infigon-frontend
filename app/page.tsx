@@ -1,15 +1,9 @@
-import AppBar from "@/components/ui/AppBar";
-import CareerOptions from "@/components/CareerOptions";
 import Dashboard from "@/components/Dashboard";
-import Intro from "@/components/Intro";
 
-export default function Home() {
+export default function App() {
   return (
     <div>
-      <AppBar />
-      <Intro />
-      <CareerOptions />
-      <Dashboard />{" "}
+      <Dashboard />
     </div>
   );
 }

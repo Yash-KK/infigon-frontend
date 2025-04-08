@@ -3,8 +3,8 @@ import Label from "./ui/Label";
 
 export default function Intro() {
   return (
-    <div className="flex items-center">
-      <div className="p-7 w-3/5">
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="p-7 w-full md:w-3/5">
         <Label
           text=" Your Career Analysis Report"
           className="text-[28px] font-[700] text-black pb-1"

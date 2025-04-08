@@ -3,7 +3,7 @@ import Label from "./ui/Label";
 
 const CareerOptions = () => {
   return (
-    <div className="flex items-center border-1 border-gray-300 p-1">
+    <div className="hidden md:flex flex-col md:flex-row items-center border-1 border-gray-300 p-2 md:p-1">
       <div className="flex justify-between items-center w-4/7 p-4 ">
         <div className="text-[#999CA1] text-xl text-right mr-15 flex-1">
           Your <span className="font-bold text-[#0047AB]">TOP 3</span> Career

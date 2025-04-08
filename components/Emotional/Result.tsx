@@ -3,9 +3,8 @@ import { useState } from "react";
 
 import Button from "../ui/Button";
 
-import { tabs, description, careerData } from "@/data/Career/result";
+import { tabs, description } from "@/data/Career/result";
 import CareerCard from "../Career/CareerCard";
-import CareerPoints from "../Career/CareerPoints";
 import { emotionalData } from "@/data/Emotional/result";
 import { emotionalPointsCircleData } from "@/data/Emotional/dainelGoleman";
 import EmotionalPointsCircle from "./PointsCircle";

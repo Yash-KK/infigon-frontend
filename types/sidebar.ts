@@ -17,3 +17,12 @@ export type SidebarItem = {
   color: ColorKey;
   icon: StaticImageData;
 };
+
+export type SideBarProps = {
+  activeId: string;
+  setActiveId: (id: string) => void;
+  activeChild: string | null;
+  setActiveChild: (child: string | null) => void;
+  activeDescriptionId: string | null;
+  setActiveDescriptionId: (id: string | null) => void;
+};

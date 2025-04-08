@@ -1,7 +1,15 @@
 import { careerColorMap } from "@/data/Career/result";
 import { emotionalColorMap } from "@/data/Emotional/result";
-
-const CareerCard = ({ data, index }: { data: any; index: number }) => {
+interface CareerData {
+  title: string;
+  score: string;
+  rank: number;
+  description: string;
+  pros: string[];
+  cons: string[];
+  color: string;
+}
+const CareerCard = ({ data, index }: { data: CareerData; index: number }) => {
   const color = emotionalColorMap[data.color] ?? careerColorMap[data.color];
 
   return (
