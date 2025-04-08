@@ -2,15 +2,7 @@ import Image from "next/image";
 import DownloadIcon from "@/icons/Download";
 import { colorClassMap, sidebarData } from "@/data/sidebar";
 import Button from "./Button";
-
-type Props = {
-  activeId: string;
-  setActiveId: (id: string) => void;
-  activeChild: string | null;
-  setActiveChild: (child: string | null) => void;
-  activeDescriptionId: string | null;
-  setActiveDescriptionId: (id: string | null) => void;
-};
+import { SideBarProps } from "@/types/sidebar";
 
 const SideBar = ({
   activeId,
@@ -18,7 +10,7 @@ const SideBar = ({
   activeChild,
   setActiveChild,
   setActiveDescriptionId,
-}: Props) => {
+}: SideBarProps) => {
   return (
     <aside className="w-72 p-4 border-r border-[#CACACA] bg-white">
       <div className="flex flex-col gap-6 h-[770px]">
@@ -34,7 +26,7 @@ const SideBar = ({
                   setActiveDescriptionId(null);
                 }}
                 className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer shadow-lg 
-      border border-gray-200 bg-white ${
+      border border-gray-200 bg-white  transition-all duration-300 ease-in-out ${
         activeId === item.id ? `border-r-4 ${color.border}` : ""
       }`}
               >

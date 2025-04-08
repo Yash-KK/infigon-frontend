@@ -1,6 +1,15 @@
 import { careerColorMap } from "@/data/Career/result";
 
-const CareerPoints = ({ data, index }: { data: any; index: number }) => {
+interface CareerData {
+  title: string;
+  score: string;
+  rank: number;
+  description: string;
+  pros: string[];
+  cons: string[];
+  color: string;
+}
+const CareerPoints = ({ data, index }: { data: CareerData; index: number }) => {
   const color = careerColorMap[data.color];
   const [scoreNum, totalNum] = data.score.split("/").map(Number);
   const percentage = (scoreNum / totalNum) * 100;

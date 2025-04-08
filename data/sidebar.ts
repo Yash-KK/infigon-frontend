@@ -8,27 +8,27 @@ import { ColorClass, ColorKey, SidebarItem } from "@/types/sidebar";
 export const colorClassMap: Record<ColorKey, ColorClass> = {
   blue: {
     text: "text-blue-700",
-    border: "peer-checked:border-blue-700",
+    border: "border-sky-700",
     hover: "hover:text-blue-500",
   },
   green: {
     text: "text-green-700",
-    border: "peer-checked:border-green-700",
+    border: "border-green-700",
     hover: "hover:text-green-500",
   },
   orange: {
     text: "text-orange-500",
-    border: "peer-checked:border-orange-500",
+    border: "border-orange-500",
     hover: "hover:text-orange-500",
   },
   pink: {
     text: "text-pink-700",
-    border: "peer-checked:border-pink-700",
+    border: "border-pink-700",
     hover: "hover:text-pink-500",
   },
   "light-blue": {
     text: "text-sky-700",
-    border: "peer-checked:border-sky-700",
+    border: "border-sky-700",
     hover: "hover:text-sky-500",
   },
 };
