@@ -1,4 +1,4 @@
-import { SidebarItem } from "@/types/types";
+import { DashboardProps } from "@/types/types";
 import PersonalityExplorer from "@/components/Personality/Explorer";
 import PersonalityResult from "@/components/Personality/Result";
 import PersonalityTypes from "@/components/Personality/Types";
@@ -14,12 +14,7 @@ import InterstExplorer from "./Interest/Explorer";
 import RAISECModel from "./Interest/RAISEC";
 import InterestResult from "./Interest/Result";
 
-type Props = {
-  item: SidebarItem;
-  activeChild: string | null;
-};
-
-const DashboardContent = ({ item, activeChild }: Props) => {
+const DashboardContent = ({ item, activeChild }: DashboardProps) => {
   if (item.id === "test1") {
     if (activeChild === "Personality Types") return <PersonalityTypes />;
     if (activeChild === "Your Result") return <PersonalityResult />;
@@ -48,20 +43,6 @@ const DashboardContent = ({ item, activeChild }: Props) => {
     if (activeChild === "Your Result") return <LearningResult />;
     return <LearningStyles />;
   }
-
-  return (
-    <div className="p-8 flex-1">
-      <h1 className="text-2xl font-bold mb-2">{item.title}</h1>
-      <p className="text-gray-700 mb-4">{item.description}</p>
-      <div className="space-y-2">
-        {item.children.map((child) => (
-          <div key={child} className="bg-gray-100 p-3 rounded">
-            {child}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
 };
 
 export default DashboardContent;

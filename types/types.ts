@@ -68,3 +68,7 @@ export interface HoverCardProps {
   icon: StaticImageData;
 }
 
+export type DashboardProps = {
+  item: SidebarItem;
+  activeChild: string | null;
+};
