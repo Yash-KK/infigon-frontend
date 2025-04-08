@@ -12,7 +12,7 @@ const RAISECModel = () => {
       <div className="text-[#0047AB] text-xl font-bold mb-6">
         Themes of RIASEC
       </div>
-
+      <div></div>
       <div className="pt-10">
         <div className="pt-10">
           <Label
