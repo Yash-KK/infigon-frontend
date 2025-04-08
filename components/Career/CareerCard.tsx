@@ -1,7 +1,8 @@
 import { careerColorMap } from "@/data/Career/result";
+import { emotionalColorMap } from "@/data/Emotional/result";
 
 const CareerCard = ({ data, index }: { data: any; index: number }) => {
-  const color = careerColorMap[data.color];
+  const color = emotionalColorMap[data.color] ?? careerColorMap[data.color];
 
   return (
     <div className="m-3 px-5">
@@ -21,8 +22,7 @@ const CareerCard = ({ data, index }: { data: any; index: number }) => {
               <div className="px-1" />
               <span
                 className={`flex items-center justify-center font-bold rounded-full border w-8 h-8 border border-white ${color.capsuleBg}`}
-              >
-              </span>
+              ></span>
             </div>
           </div>
         </div>

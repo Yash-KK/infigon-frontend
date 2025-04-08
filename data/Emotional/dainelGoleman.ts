@@ -23,3 +23,23 @@ export const emotionalCircleData = [
   { number: 4, label: "Social Skills", color: "#B97979" },
   { number: 5, label: "Motivation", color: "#2CCFA1" },
 ];
+
+export const emotionalPointsCircleData = [
+  {
+    number: 1,
+    label: "Self-Awareness",
+    score: 45,
+    total: 50,
+    color: "#FF962D",
+  },
+  {
+    number: 2,
+    label: "Self-Regulation",
+    score: 45,
+    total: 50,
+    color: "#00A3FF",
+  },
+  { number: 3, label: "Empathy", score: 45, total: 50, color: "#EE82FF" },
+  { number: 4, label: "Social Skills", score: 45, total: 50, color: "#B97979" },
+  { number: 5, label: "Motivation", score: 45, total: 50, color: "#2CCFA1" },
+];

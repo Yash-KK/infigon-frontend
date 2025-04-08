@@ -109,7 +109,7 @@ const CareerResult = () => {
             <h3 className="text-lg font-semibold text-[#0047AB] mb-4">
               Conclusion
             </h3>
-            <div className="space-y-4 bg-yellow-600 rounded-xl p-2 text-white font-medium">
+            <div className="space-y-4 bg-yellow-600 rounded-xl p-5 text-white font-medium">
               {description}
             </div>
           </>
