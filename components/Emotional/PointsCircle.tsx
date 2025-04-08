@@ -1,3 +1,5 @@
+"use client";
+import { EmotionalPointCircleProps } from "@/types/types";
 import { useEffect, useRef } from "react";
 
 const EmotionalPointsCircle = ({
@@ -6,13 +8,7 @@ const EmotionalPointsCircle = ({
   score,
   total,
   color = "#FF7A00",
-}: {
-  number: number;
-  label: string;
-  score: number;
-  total: number;
-  color?: string;
-}) => {
+}: EmotionalPointCircleProps) => {
   const percentage = (score / total) * 100;
   const circleRef = useRef<SVGCircleElement>(null);
 

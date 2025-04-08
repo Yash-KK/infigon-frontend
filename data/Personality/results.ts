@@ -91,3 +91,23 @@ export const interpersonalInteraction = [
     desc: `They are friendly, approachable, & enjoy being around people. They are often seen as the "hosts" of their social circles.`,
   },
 ];
+
+export const personalityData = ` Congratulations on taking the first step for personalized Career
+                Planning & Assessment! We understand the significance of making
+                informed decisions as you navigate your academic journey and
+                future career. We are committed to empowering individuals with
+                the tools and insights needed to confidently navigate the world
+                of careers and education.`;
+
+export const comparisonPoints = [
+  "Strategic Thinking",
+  "Problem Solving",
+  "Independence",
+  "Visionary Leadership",
+  "Efficiency",
+];
+
+export const staticPoint = `They are
+                        friendly, approachable, &amp; enjoy being around people.
+                        They are often seen as the &quot;hosts&quot; of their
+                        social circles.`;

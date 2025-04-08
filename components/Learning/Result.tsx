@@ -10,7 +10,10 @@ import {
   strengths,
   environment,
   workspaceManifestation,
+  introduction,
 } from "@/data/Learning/result";
+import DisplayTabs from "../ui/DiplayTab";
+import Label from "../ui/Label";
 const LearningResult = () => {
   const [activeTab, setActiveTab] = useState("Learning Style");
 
@@ -21,47 +24,31 @@ const LearningResult = () => {
           Your <span className="text-[#DE5AFF] font-bold">Result</span>
         </p>
       </div>
-      <div className="mt-6 flex flex-wrap gap-6 border-b text-gray-500 text-sm font-medium">
-        {tabs.map((tab) => (
-          <div
-            key={tab}
-            className={`pb-2 cursor-pointer border-b-2 ${
-              activeTab === tab
-                ? "border-blue-600 text-blue-600"
-                : "border-transparent hover:text-blue-600"
-            }`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab}
-          </div>
-        ))}
-      </div>
-
+      <DisplayTabs
+        tabs={tabs}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
       <div className="mt-8">
         {activeTab === "Learning Style" && (
           <>
             <div className="flex items-center">
               <Image src={EarImage} alt="tools" height={30} width={30} />
-              <h3 className="text-2xl font-bold text-[#FF6969] mx-2 mb-2">
-                Kinesthetic
-              </h3>
+              <Label
+                text="Kinesthetic"
+                className="text-2xl font-bold text-[#FF6969] mx-2 mb-2"
+              />
             </div>
 
-            <div className="px-4 text-[#5B6871]">
-              Congratulations on taking the first step for personalized Career
-              Planning & Assessment! We understand the significance of making
-              informed decisions as you navigate your academic journey and
-              future career. We are committed to empowering individuals with the
-              tools and insights needed to confidently navigate the world of
-              careers and education.
-            </div>
+            <div className="px-4 text-[#5B6871]">{introduction}</div>
           </>
         )}
         {activeTab === "Characterisitics" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Characterisitics
-            </h3>
+            <Label
+              text="Characterisitics"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {characterisitics.map((item, idx) => (
                 <div
@@ -77,9 +64,10 @@ const LearningResult = () => {
         )}
         {activeTab === "Preferences" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Learning Preferences
-            </h3>
+            <Label
+              text="Learning Preferences"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {preferences.map((item, idx) => (
                 <div
@@ -96,9 +84,10 @@ const LearningResult = () => {
 
         {activeTab === "Strengths" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Strengths{" "}
-            </h3>
+            <Label
+              text="Strengths"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {strengths.map((item, idx) => (
                 <div
@@ -115,9 +104,10 @@ const LearningResult = () => {
 
         {activeTab === "Environment" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Environment
-            </h3>
+            <Label
+              text="Environment"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {environment.map((item, idx) => (
                 <div
@@ -134,9 +124,10 @@ const LearningResult = () => {
 
         {activeTab === "Workspace Manifestation" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Manifestation in Workspace
-            </h3>
+            <Label
+              text="Manifestation in Workspace"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {workspaceManifestation.map((item, idx) => (
                 <div

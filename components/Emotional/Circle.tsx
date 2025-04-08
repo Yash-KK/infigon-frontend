@@ -1,12 +1,6 @@
-const EmotionalCircle = ({
-  number,
-  label,
-  color,
-}: {
-  number: number;
-  label: string;
-  color: string;
-}) => {
+import { EmotionalCircleProps } from "@/types/types";
+
+const EmotionalCircle = ({ number, label, color }: EmotionalCircleProps) => {
   return (
     <div className="flex justify-center items-center">
       <div

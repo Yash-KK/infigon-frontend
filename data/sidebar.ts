@@ -3,7 +3,7 @@ import InterestImage from "../public/interest.png";
 import CareerImage from "../public/career.png";
 import BrainImage from "../public/brain.png";
 import LearningImage from "../public/learning.png";
-import { ColorClass, ColorKey, SidebarItem } from "@/types/sidebar";
+import { ColorClass, ColorKey, SidebarItem } from "@/types/types";
 
 export const colorClassMap: Record<ColorKey, ColorClass> = {
   blue: {

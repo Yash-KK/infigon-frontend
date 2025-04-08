@@ -1,4 +1,4 @@
-import { SidebarItem } from "@/types/sidebar";
+import { SidebarItem } from "@/types/types";
 import PersonalityExplorer from "@/components/Personality/Explorer";
 import PersonalityResult from "@/components/Personality/Result";
 import PersonalityTypes from "@/components/Personality/Types";

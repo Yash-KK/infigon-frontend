@@ -1,11 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-
-interface HoverCardProps {
-  color: string;
-  title: string;
-  description: string;
-  icon: StaticImageData;
-}
+import { HoverCardProps } from "@/types/types";
+import Image from "next/image";
 
 const HoverCard = ({ color, title, description, icon }: HoverCardProps) => {
   return (

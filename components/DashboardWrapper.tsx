@@ -3,7 +3,7 @@
 import { useState } from "react";
 import DashboardContent from "./DashboardContent";
 import SideBar from "./ui/SideBar";
-import { SidebarItem } from "@/types/sidebar";
+import { SidebarItem } from "@/types/types";
 
 const DashboardWrapper = ({ sidebarData }: { sidebarData: SidebarItem[] }) => {
   const [activeId, setActiveId] = useState(sidebarData[0].id);

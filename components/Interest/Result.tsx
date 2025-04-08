@@ -8,11 +8,15 @@ import {
   description,
   interactionStyles,
   personality,
+  personalityData,
   preferences,
   preferrefWorkEnvironment,
   skillsAndStrengths,
   tabs,
 } from "@/data/Interest/result";
+import Divider from "../ui/Divider";
+import DisplayTabs from "../ui/DiplayTab";
+import Label from "../ui/Label";
 const InterestResult = () => {
   const [activeTab, setActiveTab] = useState("Personality");
 
@@ -22,10 +26,10 @@ const InterestResult = () => {
         <p className="text-2xl font-semibold pr-5">
           Your <span className="text-[#309759] font-bold">Result</span>
         </p>
-        <div className="h-12 w-0.5 rounded bg-gray-300 mr-5"></div>
+        <Divider />
 
         <Button
-          className="border-b-2 border-[#309759] mr-5"
+          className="border-b-2 border-[#309759] mx-5"
           textClassName="font-bold text-black pb-1"
           text="PRIMARY INTEREST"
         />
@@ -41,21 +45,11 @@ const InterestResult = () => {
           text="TERTIARY INTEREST"
         />
       </div>
-      <div className="mt-6 flex flex-wrap gap-6 border-b text-gray-500 text-sm font-medium">
-        {tabs.map((tab) => (
-          <div
-            key={tab}
-            className={`pb-2 cursor-pointer border-b-2 ${
-              activeTab === tab
-                ? "border-blue-600 text-blue-600"
-                : "border-transparent hover:text-blue-600"
-            }`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab}
-          </div>
-        ))}
-      </div>
+      <DisplayTabs
+        tabs={tabs}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
 
       <div className="mt-8">
         {activeTab === "Personality" && (
@@ -77,21 +71,15 @@ const InterestResult = () => {
                 </div>
               ))}
             </div>
-            <div className="px-4 text-[#5B6871]">
-              Congratulations on taking the first step for personalized Career
-              Planning & Assessment! We understand the significance of making
-              informed decisions as you navigate your academic journey and
-              future career. We are committed to empowering individuals with the
-              tools and insights needed to confidently navigate the world of
-              careers and education.
-            </div>
+            <div className="px-4 text-[#5B6871]">{personalityData}</div>
           </>
         )}
         {activeTab === "Preferences" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Preferences
-            </h3>
+            <Label
+              text="Preferences"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {preferences.map((item, idx) => (
                 <div
@@ -107,9 +95,10 @@ const InterestResult = () => {
         )}
         {activeTab === "Skills and Strengths" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Skills and Strengths
-            </h3>
+            <Label
+              text=" Skills and Strengths"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {skillsAndStrengths.map((item, idx) => (
                 <div
@@ -123,12 +112,12 @@ const InterestResult = () => {
             </div>
           </>
         )}
-
         {activeTab === "Preferred Work Environment" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Preferred Work Environment{" "}
-            </h3>
+            <Label
+              text="Preferred Work Environment"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="space-y-4">
               {preferrefWorkEnvironment.map((item, idx) => (
                 <div
@@ -145,9 +134,11 @@ const InterestResult = () => {
 
         {activeTab === "Interaction Styles" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Interaction Styles
-            </h3>
+            <Label
+              text="Interaction Styles"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
+
             <div className="space-y-4">
               {interactionStyles.map((item, idx) => (
                 <div
@@ -164,10 +155,13 @@ const InterestResult = () => {
 
         {activeTab === "Conclusion" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Conclusion
-            </h3>
-            <div className="space-y-4 bg-red-400 rounded-xl p-2 text-white font-medium">{description}</div>
+            <Label
+              text="Conclusion"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
+            <div className="space-y-4 bg-red-400 rounded-xl  p-5 text-white font-medium">
+              {description}
+            </div>
           </>
         )}
       </div>

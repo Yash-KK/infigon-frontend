@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import DownloadIcon from "@/icons/Download";
 import { colorClassMap, sidebarData } from "@/data/sidebar";
 import Button from "./Button";
-import { SideBarProps } from "@/types/sidebar";
+import { SideBarProps } from "@/types/types";
+import Label from "./Label";
 
 const SideBar = ({
   activeId,
@@ -30,12 +32,13 @@ const SideBar = ({
         activeId === item.id ? `border-r-4 ${color.border}` : ""
       }`}
               >
-                <Image src={item.icon} alt="My Image" width={50} height={50} />
+                <Image src={item.icon} alt="icon..." width={50} height={50} />
                 <div>
-                  <div className="text-xs text-gray-500">{item.label}</div>
-                  <div className={`font-semibold ${color.text}`}>
-                    {item.title}
-                  </div>
+                  <Label className="text-xs text-gray-500" text={item.label} />
+                  <Label
+                    className={`font-semibold ${color.text}`}
+                    text={item.title}
+                  />
                 </div>
               </div>
 
@@ -52,7 +55,7 @@ const SideBar = ({
                         : ""
                     }`}
                   >
-                    {item.description}
+                    <Label className="text-black" text={item.description} />
                   </div>
                   <ul className="text-sm text-gray-500 mt-1 flex flex-col gap-1">
                     {item.children.map((child) => (

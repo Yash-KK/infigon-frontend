@@ -16,6 +16,12 @@ export const EIUnderstanding = [
 export const description =
   "Focuses on concrete, tangible information and present realities tangible information and present realities Focuses on concrete, tangible information and present realities tangible information and present realities";
 
+export const congratulations = ` Congratulations on taking the first step for personalized Career
+            Planning & Assessment! We understand the significance of making
+            informed decisions as you navigate your academic journey and future
+            career. We are committed to empowering individuals with the tools
+            and insights needed to confidently navigate the world of careers and
+            education.`;
 export const emotionalCircleData = [
   { number: 1, label: "Self-Awareness", color: "#FF962D" },
   { number: 2, label: "Self-Regulation", color: "#00A3FF" },

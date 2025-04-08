@@ -3,13 +3,18 @@ import { useState } from "react";
 import Image from "next/image";
 import {
   characteristics,
+  comparisonPoints,
   interpersonalInteraction,
+  personalityData,
   preferences,
+  staticPoint,
   tabs,
   workStyle,
-} from "@/data/Personality/result";
+} from "@/data/Personality/results";
 
 import ArchitectImage from "../../public/Personality/Types/Architect.png";
+import DisplayTabs from "../ui/DiplayTab";
+import Label from "../ui/Label";
 const PersonalityResult = () => {
   const [activeTab, setActiveTab] = useState("Personality");
 
@@ -19,21 +24,11 @@ const PersonalityResult = () => {
         Your <span className="text-blue-700 font-bold">Result</span>
       </h2>
 
-      <div className="mt-6 flex flex-wrap gap-6 border-b text-gray-500 text-sm font-medium">
-        {tabs.map((tab) => (
-          <div
-            key={tab}
-            className={`pb-2 cursor-pointer border-b-2 ${
-              activeTab === tab
-                ? "border-blue-600 text-blue-600"
-                : "border-transparent hover:text-blue-600"
-            }`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab}
-          </div>
-        ))}
-      </div>
+      <DisplayTabs
+        tabs={tabs}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
 
       <div className="mt-8">
         {activeTab === "Personality" && (
@@ -52,33 +47,30 @@ const PersonalityResult = () => {
                 <span className="text-purple-600">| INTJ Personality</span>
               </h3>
               <div className="flex gap-2 mt-3 mb-4">
-                <span className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full">
-                  STRATEGIC
-                </span>
-                <span className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full">
-                  ANALYTICAL
-                </span>
-                <span className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full">
-                  INDEPENDENT
-                </span>
+                <Label
+                  className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full"
+                  text="INDEPENDENT"
+                />
+                <Label
+                  className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full"
+                  text="ANALYTICAL"
+                />
+                <Label
+                  className="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full"
+                  text="STRATEGIC"
+                />
               </div>
-              <p className="text-gray-700 leading-relaxed">
-                Congratulations on taking the first step for personalized Career
-                Planning & Assessment! We understand the significance of making
-                informed decisions as you navigate your academic journey and
-                future career. We are committed to empowering individuals with
-                the tools and insights needed to confidently navigate the world
-                of careers and education.
-              </p>
+              <p className="text-gray-700 leading-relaxed">{personalityData}</p>
             </div>
           </div>
         )}
 
         {activeTab === "Characteristics" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Characteristics
-            </h3>
+            <Label
+              className="text-lg font-semibold text-blue-600 mb-4"
+              text="Characteristics"
+            />
             <ul className="space-y-6 list-disc list-inside text-gray-800">
               {characteristics.map((item, idx) => (
                 <li key={idx}>
@@ -97,13 +89,7 @@ const PersonalityResult = () => {
                 Strengths
               </h3>
               <div className="space-y-4">
-                {[
-                  "Strategic Thinking",
-                  "Problem Solving",
-                  "Independence",
-                  "Visionary Leadership",
-                  "Efficiency",
-                ].map((title, idx) => (
+                {comparisonPoints.map((title, idx) => (
                   <div
                     key={idx}
                     className="bg-green-600 text-white p-4 rounded-xl shadow-md"
@@ -111,10 +97,8 @@ const PersonalityResult = () => {
                     <div className="flex items-start gap-2">
                       <div className="mt-1 text-white text-lg">•</div>
                       <p className="text-sm">
-                        <span className="font-semibold">{title}:</span> They are
-                        friendly, approachable, &amp; enjoy being around people.
-                        They are often seen as the &quot;hosts&quot; of their
-                        social circles.
+                        <span className="font-semibold">{title}: </span>
+                        {staticPoint}
                       </p>
                     </div>
                   </div>
@@ -127,13 +111,7 @@ const PersonalityResult = () => {
                 Weaknesses
               </h3>
               <div className="space-y-4">
-                {[
-                  "Strategic Thinking",
-                  "Problem Solving",
-                  "Independence",
-                  "Visionary Leadership",
-                  "Efficiency",
-                ].map((title, idx) => (
+                {comparisonPoints.map((title, idx) => (
                   <div
                     key={idx}
                     className="bg-red-500 text-white p-4 rounded-xl shadow-md"
@@ -141,10 +119,8 @@ const PersonalityResult = () => {
                     <div className="flex items-start gap-2">
                       <div className="mt-1 text-white text-lg">•</div>
                       <p className="text-sm">
-                        <span className="font-semibold">{title}:</span> They are
-                        friendly, approachable, &amp; enjoy being around people.
-                        They are often seen as the &quot;hosts&quot; of their
-                        social circles.
+                        <span className="font-semibold">{title}:</span>{" "}
+                        {staticPoint}
                       </p>
                     </div>
                   </div>
@@ -156,9 +132,10 @@ const PersonalityResult = () => {
 
         {activeTab === "Work Style" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Work Style
-            </h3>
+            <Label
+              text="Work Style"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="border border-gray-300 shadow rounded-lg p-3">
               <ul className="space-y-6 list-disc list-inside text-gray-800">
                 {workStyle.map((item, idx) => (
@@ -168,14 +145,15 @@ const PersonalityResult = () => {
                   </li>
                 ))}
               </ul>
-            </div>{" "}
+            </div>
           </>
         )}
         {activeTab === "Preferences" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Work Style
-            </h3>
+            <Label
+              text="Preferences"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="border border-gray-300 shadow rounded-lg p-3">
               <ul className="space-y-6 text-gray-800">
                 {preferences.map((item, idx) => (
@@ -194,9 +172,10 @@ const PersonalityResult = () => {
 
         {activeTab === "Interpersonal Interaction" && (
           <>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">
-              Work Style
-            </h3>
+            <Label
+              text="Interpersonal Interaction"
+              className="text-lg font-semibold text-blue-600 mb-4"
+            />
             <div className="border border-gray-300 shadow rounded-lg p-3">
               <ul className="space-y-6 list-disc list-inside text-gray-800">
                 {interpersonalInteraction.map((item, idx) => (

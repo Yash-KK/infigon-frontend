@@ -1,10 +1,14 @@
-import { description, dichotomies, mbtiApplications } from "@/data/Personality/explorer";
+import {
+  description,
+  dichotomies,
+  introduction1,
+  introduction2,
+  mbtiApplications,
+} from "@/data/Personality/explorer";
 import CardWrapper from "../ui/CardWrapper";
 import Label from "../ui/Label";
 
 const PersonalityExplorer = () => {
-
-
   return (
     <div className="p-8 flex-1">
       <div className="text-4xl font-bold">
@@ -14,29 +18,16 @@ const PersonalityExplorer = () => {
 
       <div>
         <Label text="Introduction" className="font-bold text-black pt-5" />
-        <p className="text-[#5B6871] pt-1 tracking-wide">
-          Congratulations on taking the first step for personalized Career
-          Planning & Assessment! We understand the significance of making
-          informed decisions as you navigate your academic journey and future
-          career. We are committed to empowering individuals with the tools and
-          insights needed to confidently navigate the world of careers and
-          education.
-        </p>
+        <p className="text-[#5B6871] pt-1 tracking-wide">{introduction1}</p>
       </div>
 
-      <div>
-        <p className="text-[#5B6871] pt-4 tracking-wide">
-          <span className="text-black font-bold">
-            To understand your personality Myers-Brig Type Indicator (MBTI) test
-            was used.
-          </span>{" "}
-          It is a personality explorer psychometric assessment tool that helps
-          individuals understand their preferences, strengths, and areas for
-          growth. Developed by Isabel Briggs Myers and Katharine Cook Briggs,
-          the MBTI categorizes individuals into 16 personality types based on
-          four dichotomies. The goal is to gain deeper self-awareness, enhance
-          personal development, and improve interpersonal relationships.
-        </p>
+      <div className="text-[#5B6871] pt-4 tracking-wide ">
+          <Label
+            text="To understand your personality Myers-Brig Type Indicator (MBTI) test
+            was used."
+            className="text-black font-bold"
+          />
+          {introduction2}
       </div>
 
       <div className="pt-10">
