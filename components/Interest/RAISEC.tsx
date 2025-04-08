@@ -1,18 +1,24 @@
 import CardWrapper from "../ui/CardWrapper";
 import Label from "../ui/Label";
+import PieChartImage from "../../public/Interest/piechart1.png";
+
 import {
   RAISECApplications,
   RAISECUnderstanding,
   RAISECUnderstanding2,
   description,
 } from "@/data/Interest/RAISEC";
+import Image from "next/image";
 const RAISECModel = () => {
   return (
     <div className="p-8 flex-1">
       <div className="text-[#0047AB] text-xl font-bold mb-6">
         Themes of RIASEC
       </div>
-      <div></div>
+      <div className="flex justify-center">
+        <Image src={PieChartImage} alt="Pie Chart" height={700} width={700} />
+      </div>
+
       <div className="pt-10">
         <div className="pt-10">
           <Label

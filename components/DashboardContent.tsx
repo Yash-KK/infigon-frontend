@@ -8,7 +8,7 @@ import DanielGolemanTest from "./Emotional/DanielGoleman";
 import CareerResult from "./Career/Result";
 import EmotionalResult from "./Emotional/Result";
 import EmotionalIntelligence from "./Emotional/Intelligence";
-import UnderstandingLearningStyles from "./Learning/Styles";
+import LearningStyles from "./Learning/Styles";
 import LearningResult from "./Learning/Result";
 import InterstExplorer from "./Interest/Explorer";
 import RAISECModel from "./Interest/RAISEC";
@@ -46,7 +46,7 @@ const DashboardContent = ({ item, activeChild }: Props) => {
 
   if (item.id === "test5") {
     if (activeChild === "Your Result") return <LearningResult />;
-    return <UnderstandingLearningStyles />;
+    return <LearningStyles />;
   }
 
   return (
