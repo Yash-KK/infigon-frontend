@@ -8,7 +8,7 @@ const Label = ({ text, className }: LabelProps) => {
     <div
       className={`${className} text-[#5B6871]`}
     >
-      {text}
+      <span>{text}</span>
     </div>
   );
 };

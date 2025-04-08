@@ -8,6 +8,9 @@ import CareerCard from "../Career/CareerCard";
 import { emotionalData } from "@/data/Emotional/result";
 import { emotionalPointsCircleData } from "@/data/Emotional/dainelGoleman";
 import EmotionalPointsCircle from "./PointsCircle";
+import Divider from "../ui/Divider";
+import Label from "../ui/Label";
+import StepCircle from "../ui/StepCircle";
 
 const EmotionalResult = () => {
   const [activeTab, setActiveTab] = useState("Your Scores");
@@ -38,21 +41,17 @@ const EmotionalResult = () => {
                 Your <span className="font-bold">Scores</span>
               </p>
 
-              <div className="h-12 w-0.5 rounded bg-gray-300 mr-5"></div>
+              <Divider />
               <div className="flex">
                 <Button
                   text="Strength"
-                  className="flex items-center font-bold p-1 px-3 rounded-full text-[#696969]"
-                  leftChild={
-                    <span className="flex items-center justify-center font-bold bg-green-500 rounded-full w-8 h-8 mr-2"></span>
-                  }
+                  className="flex items-center font-bold p-1 px-4 rounded-full text-[#696969]"
+                  leftChild={<StepCircle color="bg-green-500" />}
                 />
                 <Button
                   text="Needs Attention"
                   className="flex items-center font-bold p-1 px-3 rounded-full text-[#696969]"
-                  leftChild={
-                    <span className="flex items-center justify-center font-bold bg-red-500 rounded-full w-8 h-8 mr-2"></span>
-                  }
+                  leftChild={<StepCircle color="bg-red-500" />}
                 />
               </div>
             </div>
@@ -67,24 +66,24 @@ const EmotionalResult = () => {
         {activeTab === "Conclusion" && (
           <>
             <div className="flex items-center">
-              <p className="text-2xl font-semibold pr-5 text-[#0047AB]">
-                Summarised Result{" "}
-              </p>
-
-              <div className="h-12 w-0.5 rounded bg-gray-300 mr-5"></div>
+              <Label
+                text="Summarised Result"
+                className="text-2xl font-semibold pr-4 text-[#0047AB]"
+              />
+              <Divider />
               <div className="flex">
                 <Button
                   text="Strength"
                   className="flex items-center font-bold p-1 px-3 rounded-full text-[#696969]"
                   leftChild={
-                    <span className="flex items-center justify-center font-bold bg-green-500 rounded-full w-8 h-8 mr-2"></span>
+                    <StepCircle color="bg-green-500" />
                   }
                 />
                 <Button
                   text="Needs Attention"
                   className="flex items-center font-bold p-1 px-3 rounded-full text-[#696969]"
                   leftChild={
-                    <span className="flex items-center justify-center font-bold bg-red-500 rounded-full w-8 h-8 mr-2"></span>
+                    <StepCircle color="bg-red-500" />
                   }
                 />
               </div>
@@ -102,9 +101,10 @@ const EmotionalResult = () => {
               ))}
             </div>
 
-            <h3 className="text-lg font-semibold text-[#0047AB] mb-4">
-              Conclusion
-            </h3>
+            <Label
+              text="Conclusion"
+              className="text-lg font-semibold text-[#0047AB] mb-4 pt-2"
+            />
             <div className="space-y-4 bg-blue-500 rounded-xl p-5 text-white font-medium">
               {description}
             </div>

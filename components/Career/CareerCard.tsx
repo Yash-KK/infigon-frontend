@@ -13,7 +13,7 @@ const CareerCard = ({ data, index }: { data: CareerData; index: number }) => {
   const color = emotionalColorMap[data.color] ?? careerColorMap[data.color];
 
   return (
-    <div className="m-3 px-5">
+    <div className="m-3 px-2">
       <div>
         <div className={`flex items-center justify-between`}>
           <span

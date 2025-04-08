@@ -1,5 +1,7 @@
 import Button from "./ui/Button";
+import Divider from "./ui/Divider";
 import Label from "./ui/Label";
+import StepCircle from "./ui/StepCircle";
 
 const CareerOptions = () => {
   return (
@@ -9,40 +11,28 @@ const CareerOptions = () => {
           Your <span className="font-bold text-[#0047AB]">TOP 3</span> Career
           Options
         </div>
-        <div className="flex w-2/5 space-x-5">
+        <div className="flex space-x-5">
           <Button
             text="Enginner"
             textClassName="blur-[2px]"
             className="flex items-center border border-gray-300 p-1 px-3 rounded-full text-[#696969]"
-            leftChild={
-              <span className="flex items-center justify-center font-bold bg-gray-300 text-white rounded-full w-8 h-8 mr-2">
-                1
-              </span>
-            }
+            leftChild={<StepCircle num={1} />}
           />
           <Button
             text="Doctor"
             textClassName="blur-[2px]"
             className="flex items-center border border-gray-300 p-1 px-3 rounded-full text-[#696969]"
-            leftChild={
-              <span className="flex items-center justify-center font-bold bg-gray-300 text-white rounded-full w-8 h-8 mr-2">
-                2
-              </span>
-            }
+            leftChild={<StepCircle num={2} />}
           />
           <Button
             text="Teacher"
             textClassName="blur-[2px]"
             className="flex items-center border border-gray-300 p-1 px-3 rounded-full text-[#696969]"
-            leftChild={
-              <span className="flex items-center justify-center font-bold bg-gray-300 text-white rounded-full w-8 h-8 mr-2">
-                3
-              </span>
-            }
+            leftChild={<StepCircle num={3} />}
           />
         </div>
       </div>
-      <div className="h-12 w-0.5 rounded bg-gray-300 mx-2"></div>
+      <Divider />
       <div className="flex items-center p-4 flex-1">
         <Label
           text="Choose them right here! "
